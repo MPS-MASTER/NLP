@@ -1,0 +1,9 @@
+Agents : Some applications will require not just a predetermined chain of calls to LLMs/other tools, but potentially an unknown chain that depends on the user's input. In these types of chains, there is a “agent” which has access to a suite of tools. Depending on the user input, the agent can then decide which, if any, of these tools to call.​
+
+Tools : How language models interact with other resources.(wikipedia, llm-math, Search), A specific abstraction around a function that makes it easy for a language model to interact with it. Specificlaly, the interface of a tool has a single text input and a single text output.​
+
+Agents : The language model that drives decision making. An Agent is a wrapper around a model, which takes in user input and returns a response corresponding to an “action” to take and a corresponding “action input”.​
+
+Toolkits: Sets of tools that when used together can accomplish a specific task. Groups of tools that can be used/are necessary to solve a particular problem.(wikipedia, llm-math, Search)​
+
+Agent Executor: The logic for running agents with tools. An Agent Executor is an Agent and set of Tools. The agent executor is responsible for calling the agent, getting back and action and action input, calling the tool that the action references with the corresponding input, getting the output of the tool, and then passing all that information back into the Agent to get the next action it should take​
